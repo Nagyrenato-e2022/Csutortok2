@@ -1,0 +1,46 @@
+body {
+    background-color: #F5F5F5;
+  }
+
+header {
+    background-color: black;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #navbar {
+    display: flex;
+    justify-content: center;
+  }
+
+  #navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  #navbar li {
+    margin: 0 15px;
+  }
+
+  #navbar a {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+
+  #navbar a:hover {
+    color: black;
+  }
+
+  #navbar a.active {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
