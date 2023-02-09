@@ -44,7 +44,14 @@
           padding: 20px;
           align-items: center;
         }
-    
+        .shopping-cart {
+      display: flex;
+      align-items: center;
+    }
+
+    .shopping-cart p {
+      margin-right: 10px;
+    }
           </style>
     </head>
     <body>
@@ -78,5 +85,13 @@
     <div class="card">
           <h2>Audi e-tron</h2>
           <p>The Audi e-tron is a luxury all-electric SUV. It has a range of up to 222 miles and can go from 0 to 60
+            <script>
+              let items = 0;
+          
+              function addToCart() {
+                items++;
+                document.querySelector(".shopping-cart p").innerHTML = Shopping Cart: ${items} items;
+              }
+            </script>
 </body>
 </html>

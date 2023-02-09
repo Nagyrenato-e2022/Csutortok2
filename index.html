@@ -72,6 +72,14 @@ input[type="submit"] {
   border-radius: 5px;
   cursor: pointer;
 }
+.shopping-cart {
+      display: flex;
+      align-items: center;
+    }
+
+    .shopping-cart p {
+      margin-right: 10px;
+    }
 </style>
 </head>
 <body>
@@ -82,26 +90,18 @@ input[type="submit"] {
         <li><a href="page1.html">Prices</a></li>
         <li><a href="page2.html">Cars</a></li>
         <li><a href="page3.html">Buy Here</a></li>
+        <div class="shopping-cart">
+          <p>Shopping Cart: 0 items</p>
+          <button onclick="addToCart()">Buy</button>
       </ul>
     </nav>
   </header>
-  <h1>Welcome to the Homepage</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Proin auctor, magna non tincidunt blandit, sapien risus tincidunt ligula,
-    eu tristique ipsum quam at nisi. Curabitur quis nisi non eros laoreet accumsan. 
-    Sed sit amet blandit ipsum. Fusce ac hendrerit urna. Duis sit amet congue magna,
-    non pulvinar magna. Nunc pharetra, eros eget scelerisque consectetur, 
-    lacus elit dapibus justo, non malesuada nulla velit vel velit. Quisque libero libero, 
-    sagittis et dictum vel, laoreet a diam. Sed a mauris orci. Morbi viverra egestas pellentesque.
-    Nam vel mauris velit. Integer scelerisque velit a velit facilisis, vel faucibus velit rhoncus.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Proin auctor, magna non tincidunt blandit, sapien risus tincidunt ligula,
-    eu tristique ipsum quam at nisi. Curabitur quis nisi non eros laoreet accumsan. 
-    Sed sit amet blandit ipsum. Fusce ac hendrerit urna. Duis sit amet congue magna,
-    non pulvinar magna. Nunc pharetra, eros eget scelerisque consectetur, 
-    lacus elit dapibus justo, non malesuada nulla velit vel velit. Quisque libero libero, 
-    sagittis et dictum vel, laoreet a diam. Sed a mauris orci. Morbi viverra egestas pellentesque.
-    Nam vel mauris velit. Integer scelerisque velit a velit facilisis, vel faucibus velit rhoncus.</p>
+  <h1>Welcome to our exclusive selection of high-end vehicles!</h1>
+  <p> At our dealership, we pride ourselves in offering a diverse range of the latest and greatest cars on the market. Whether you're in the market for an electric car or a luxury sedan, we have it all.
+    Our inventory includes the sleek and stylish Toyota Camry, the innovative and efficient Tesla Model 3, the high-performance Porsche Taycan, the bold and adventurous Jaguar I-PACE, and the cutting-edge Audi e-tron.
+    Each of these cars is unique in its own way and offers a remarkable driving experience. Whether you're looking for a car to impress, one that's practical, or one that's just plain fun to drive, we have the perfect option for you.
+    We understand that buying a car can be a big decision, which is why our team of knowledgeable and friendly sales associates are here to help. They will listen to your needs, answer any questions you may have, and guide you through the buying process.
+    Visit us today to take a test drive and experience the thrill of driving one of our stunning cars. Our team is eager to assist you in finding the car of your dreams.</p>
     <div class="form-container">
         <h2>Login here</h2>
         <form action="">
@@ -110,5 +110,13 @@ input[type="submit"] {
           <input type="submit" value="Submit">
         </form>
       </div>
+      <script>
+        let items = 0;
+    
+        function addToCart() {
+          items++;
+          document.querySelector(".shopping-cart p").innerHTML = Shopping Cart: ${items} items;
+        }
+      </script>
 </body>
 </html>

@@ -61,6 +61,14 @@
       border-radius: 10px;
       cursor: pointer;
     }
+    .shopping-cart {
+      display: flex;
+      align-items: center;
+    }
+
+    .shopping-cart p {
+      margin-right: 10px;
+    }
           </style>
     </head>
     <body>
@@ -71,6 +79,9 @@
             <li><a href="page1.html">Prices</a></li>
             <li><a href="page2.html">Cars</a></li>
             <li><a href="page3.html">Buy Here</a></li>
+            <div class="shopping-cart">
+              <p>Shopping Cart: 0 items</p>
+              <button onclick="addToCart()">Buy</button>
           </ul>
         </nav>
       </header>
@@ -99,5 +110,13 @@
             <img src="" alt="Audi e-tron">
             <h2>Audi e-tron</h2>
             <button onclick="alert('You selected the Audi e-tron for $65,900.')">Buy</button>
+            <script>
+              let items = 0;
+          
+              function addToCart() {
+                items++;
+                document.querySelector(".shopping-cart p").innerHTML = Shopping Cart: ${items} items;
+              }
+            </script>
 </body>
 </html>
